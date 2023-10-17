@@ -3,11 +3,11 @@
 namespace SingleInstanceExample;
 internal class MyClass : IInterfaceA, IInterfaceB
 {
-    public int InstanceIdentifier { get; }
+    public Guid InstanceIdentifier { get; }
 
     public MyClass()
     {
-        InstanceIdentifier = Guid.NewGuid().GetHashCode();
+        InstanceIdentifier = Guid.NewGuid();
     }
 
     public void DoThingA()
